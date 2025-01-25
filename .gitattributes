@@ -1,0 +1,60 @@
+# gitattributes
+
+# Attributes
+[attr]txt      text eol=lf
+[attr]bin      filter=lfs diff=lfs merge=lfs -text binary
+
+# Auto detect text files and perform LF normalization
+*              text=auto
+
+# Git
+.gitattributes txt export-ignore
+.gitignore     txt export-ignore
+.gitkeep       txt export-ignore
+
+# Config and Data files
+*.cfg          txt diff=ini
+*.csv          txt diff=csv
+*.ini          txt diff=ini
+*.json         txt diff=json
+*.toml         txt diff=toml
+*.txt          txt
+*.yaml         txt diff=yaml
+*.yml          txt diff=yaml
+
+# Python files
+.pylintrc      txt
+*.py           txt diff=python
+py.typed       txt export-ignore
+
+# Documentation
+*.md           txt diff=markdown
+
+# Images
+*.aseprite     bin
+*.kra          bin
+*.png          bin
+*.raw          bin
+*.svg          bin
+*.webp         bin
+*.xcf          bin
+
+# Fonts
+*.otf          bin
+*.ttf          bin
+
+# Audio
+*.ogg          bin
+*.wav          bin
+
+# Archives
+*.7z binary     bin
+*.gz binary     bin
+*.jar binary    bin
+*.rar binary    bin
+*.tar binary    bin
+*.zip binary    bin
+*.[tb]z2 binary bin
+*.tgz binary    bin
+*.bz2 binary    bin
+*.xz binary     bin
